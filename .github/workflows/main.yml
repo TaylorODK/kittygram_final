@@ -87,7 +87,6 @@ jobs:
       run: |
         cd frontend/
         npm run test
-        a
   build_frontend_and_push_to_docker_hub:
     name: Push frontend Docker image to DockerHub
     runs-on: ubuntu-latest
@@ -127,7 +126,7 @@ jobs:
         with:
           context: ./gateway/
           push: true
-          tags: ddd20098/kittygram__gateway:latest 
+          tags: ddd20098/kittygram_gateway:latest 
   
   deploy:
     runs-on: ubuntu-latest
