@@ -17,7 +17,7 @@ jobs:
           POSTGRES_PASSWORD: django_password
           POSTGRES_DB: django_db
         ports:
-          - 5432:5431
+          - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
     - uses: actions/checkout@v3
@@ -37,7 +37,7 @@ jobs:
         POSTGRES_PASSWORD: django_password
         POSTGRES_DB: django_db
         DB_HOST: 127.0.0.1
-        DB_PORT: 5431
+        DB_PORT: 5432
       run: |
         cd backend/
         python -m pep8 --ignore=E501 kittygram_backend/settings.py
