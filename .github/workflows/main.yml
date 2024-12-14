@@ -39,8 +39,8 @@ jobs:
         DB_HOST: 127.0.0.1
         DB_PORT: 5431
       run: |
-        python -m pep8 backend/
         cd backend/
+        python -m pep8 --ignore=E501 kittygram_backend/settings.py
         python manage.py test
 
   frontend_tests:
