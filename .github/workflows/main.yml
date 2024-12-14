@@ -63,7 +63,6 @@ jobs:
       run: |
         cd frontend/
         npm run test
-        a
 
 
   build_and_push_to_docker_hub:
