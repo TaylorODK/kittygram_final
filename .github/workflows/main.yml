@@ -42,10 +42,7 @@ jobs:
         python -m pep8 backend/
         cd backend/
         python manage.py test
-    - name: Test frontend with tests
-      run: |
-        npm install react-scripts --save-dev
-        npm run test
+
   frontend_tests:
     runs-on: ubuntu-latest
 
